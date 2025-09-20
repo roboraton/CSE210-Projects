@@ -1,6 +1,4 @@
-// Added different scriptures and a random selector to choose one each run
-
-
+// Added different scriptures and a ramdom selector to randomly choose one
 
 using System;
 
