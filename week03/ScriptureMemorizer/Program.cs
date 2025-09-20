@@ -16,26 +16,23 @@ class Program
         {
             Console.Clear();
 
-            // Mostrar referencia y palabras
             Console.WriteLine($"{reference.GetDisplayText()}");
             Console.WriteLine(string.Join(" ", words.Select(w => w.GetDisplayText())));
-            Console.WriteLine("\nPresiona Enter para ocultar palabras o escribe 'quit' para salir.");
+            Console.WriteLine("\nPress Enter to hide words or type 'quit' to exit.");
 
             string input = Console.ReadLine();
 
             if (input.ToLower() == "quit")
                 break;
 
-            // Ocultar 3 palabras aleatorias
             HideRandomWords(words, 3);
 
-            // Verificar si ya están todas ocultas
             if (words.All(w => w.IsHidden()))
             {
                 Console.Clear();
                 Console.WriteLine($"{reference.GetDisplayText()}");
                 Console.WriteLine(string.Join(" ", words.Select(w => w.GetDisplayText())));
-                Console.WriteLine("\n¡Todas las palabras están ocultas! Programa finalizado.");
+                Console.WriteLine("\nAll words are hidden! Program finished.");
                 break;
             }
         }
@@ -52,7 +49,7 @@ class Program
         {
             int index = random.Next(visibleWords.Count);
             visibleWords[index].Hide();
-            visibleWords.RemoveAt(index); // evitar ocultar la misma palabra
+            visibleWords.RemoveAt(index);
         }
     }
 }

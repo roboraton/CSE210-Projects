@@ -35,7 +35,7 @@ public class Scriptures
         };
     }
 
-    // Randomly select a scripture
+    // Random selector
     public (Reference, string) GetRandomScripture()
     {
         Random random = new Random();
