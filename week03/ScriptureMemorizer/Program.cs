@@ -1,3 +1,7 @@
+// Added different scriptures and a random selector to choose one each run
+
+
+
 using System;
 
 class Program
